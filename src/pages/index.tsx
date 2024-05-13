@@ -10,7 +10,7 @@ export default function SiahWiki() {
         h-screen w-full
         antialiased
     `}>
-      <Header />
+      <Header title="SiahWiki" hideToggle={false}/>
       <Menu />
       <Content />
       <Footer />

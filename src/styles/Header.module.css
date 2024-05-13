@@ -1,0 +1,12 @@
+.title > a {
+    text-decoration: none;
+}
+
+header.header > a.toggle {
+    justify-self: flex-start;
+    text-decoration: none;
+}
+
+a.toggle:hover {
+    background-color:rgba(0, 0, 0, 0.2);
+}
