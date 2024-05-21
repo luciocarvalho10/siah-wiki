@@ -1,6 +1,6 @@
 import styles from '@/styles/Header.module.css'
-import { IconeAnguloBaixo, IconeAnguloEsquerdo } from '@/components/icons'
 import useStore from '@/data/hooks/useStore'
+import { ChevronLeftIcon, ChevronDownIcon } from '@heroicons/react/16/solid'
 
 interface IHeaderProps {
     className?: string
@@ -10,7 +10,6 @@ interface IHeaderProps {
 
 export default function Header(props: IHeaderProps) {
     const { toggleMenu } = useStore()
-    const icon = () => props.hideToggle ? IconeAnguloBaixo: IconeAnguloEsquerdo
 
     return (
 		<header
@@ -31,7 +30,7 @@ export default function Header(props: IHeaderProps) {
                         ${styles.toggle}
                     `}
 				>
-					<i>{icon()}</i>
+                    <ChevronLeftIcon className="w-6 h-6" />
 				</a>
 			) : (
 				<a
@@ -41,9 +40,8 @@ export default function Header(props: IHeaderProps) {
                         flex h-full w-16
                         place-items-center justify-center text-white
                         ${styles.toggle}
-                    `}
-				>
-					<i>{icon()}</i>
+				`}>
+					<ChevronDownIcon className="w-6 h-6" />
 				</a>
 			)}
 			<h1
