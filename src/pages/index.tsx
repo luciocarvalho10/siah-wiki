@@ -2,18 +2,23 @@ import Content from "@/components/template/Content";
 import Footer from "@/components/template/Footer";
 import Header from "@/components/template/Header";
 import Menu from "@/components/template/Menu";
+import useStore from "@/data/hooks/useStore";
 
 export default function SiahWiki() {
-  return (
-    <div className={`
-        app
-        h-screen w-full
-        antialiased
-    `}>
-      <Header title="SiahWiki" hideToggle={false}/>
-      <Menu />
-      <Content />
-      <Footer />
-    </div>
-  );
+    const { isMenuVisible } = useStore()
+
+	return (
+		<div className={`
+            app ${isMenuVisible ? 'hide-menu' : ''}
+            h-dvh w-full antialiased
+        `}>
+			<Header
+				title="SiahWiki"
+				hideToggle={isMenuVisible}
+			/>
+			<Menu />
+			<Content />
+			<Footer />
+		</div>
+	)
 }
