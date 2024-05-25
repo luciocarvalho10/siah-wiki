@@ -12,7 +12,7 @@ interface IHeaderProps {
 export default function Header(props: IHeaderProps) {
     const { toggleMenu } = useStore()
     const icon = (size: number) => props.hideToggle
-      ?  <ChevronDownIcon className={`h-${size} w-${size}`} />
+      ? <ChevronDownIcon className={`h-${size} w-${size}`} />
 	  : <ChevronLeftIcon className={`h-${size} w-${size}`} />
 
     const renderchevron = () => (
@@ -36,7 +36,7 @@ export default function Header(props: IHeaderProps) {
             flex place-items-center justify-center
             bg-gradient-to-r from-blue-500 to-blue-300
         `}>
-			{!props.hideToggle ? renderchevron() : renderchevron()}
+            {renderchevron()}
 			<h1
 				className={`
                     flex-grow text-center text-xl

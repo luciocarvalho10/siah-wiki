@@ -15,6 +15,7 @@ export default function SiahWiki() {
 			<Header
 				title="SiahWiki"
 				hideToggle={isMenuVisible}
+                hideUserDropdown={false}
 			/>
 			<Menu />
 			<Content />
