@@ -7,12 +7,14 @@ interface IPageTitleProps {
 export default function PageTitle(props: IPageTitleProps) {
 	return (
 		<div>
-			<h1 className="text-[1.5rem] m-0 flex items-center">
+			<h1 className="m-0 flex items-center text-4xl">
 				{props.icon ? props.icon : false}
 				{props.main}
 			</h1>
-			<h2 className="] mt-[5px] text-gray-400">{props.sub}</h2>
-			<hr />
+			<h2 className="] text-[1.3rem] mt-[5px] text-gray-500">
+				{props.sub}
+			</h2>
+			<hr className="bg-gray-300 h-1 mt-2" />
 		</div>
 	)
 }

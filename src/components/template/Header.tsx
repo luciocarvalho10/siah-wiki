@@ -1,5 +1,6 @@
 import styles from '@/styles/Header.module.css'
 import useStore from '@/data/hooks/useStore'
+import Link from 'next/link'
 import { ChevronLeftIcon, ChevronDownIcon } from '@heroicons/react/16/solid'
 import UserDropdown from './UserDropdown'
 
@@ -44,7 +45,7 @@ export default function Header(props: IHeaderProps) {
                     ${styles.title}
                 `}
 			>
-				{props.title}
+				<Link href='/dashboard'>{props.title}</Link>
 			</h1>
 
             {!props.hideUserDropdown && <UserDropdown />}
