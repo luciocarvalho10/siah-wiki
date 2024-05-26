@@ -1,4 +1,5 @@
 import useStore from '@/data/hooks/useStore'
+import Link from 'next/link'
 import {
 	ChevronDownIcon,
 	CogIcon,
@@ -27,20 +28,20 @@ export default function UserDropdown() {
 			<div
 				className={`invisible absolute right-0 z-[1] flex min-w-[170px]  flex-col flex-wrap  bg-gray-100 p-[10px]  opacity-0 shadow-lg transition-[visibility,opacity] duration-100 ease-linear group-hover:visible group-hover:opacity-[1]`}
 			>
-				<a
-					href="#"
+				<Link
+					href="/admin"
 					className="flex flex-wrap place-content-start p-[10px] hover:bg-gray-200"
 				>
 					<CogIcon className="mr-2 h-6 w-6" />
 					Administração
-				</a>
-				<a
-					href="#"
+				</Link>
+				<Link
+					href="/dashboard"
 					className="flex flex-wrap place-content-start  p-[10px] hover:bg-gray-200"
 				>
 					<ArrowRightStartOnRectangleIcon className="mr-2 h-6 w-6" />
 					Sair
-				</a>
+				</Link>
 			</div>
 		</div>
 	)
