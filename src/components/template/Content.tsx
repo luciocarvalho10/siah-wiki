@@ -1,5 +1,6 @@
 interface IContentProps {
     className?: string
+    children?: React.ReactNode
 }
 
 export default function Content(props: IContentProps) {
@@ -8,7 +9,7 @@ export default function Content(props: IContentProps) {
             content bg-gray-200 p-5
             ${props.className}
         `}>
-			<h1>Content</h1>
+			{props.children}
 		</div>
 	)
 }
