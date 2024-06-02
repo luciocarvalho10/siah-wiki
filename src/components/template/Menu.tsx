@@ -17,5 +17,5 @@ export default function Menu(props: IMenuProps) {
         </aside>
     )
 
-    return !isMenuVisible ? renderMenu() : false
+    return isMenuVisible ? renderMenu() : false
 }
