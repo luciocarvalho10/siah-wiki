@@ -10,7 +10,7 @@ export interface IContextStoreProps {
 }
 
 const initialState: IContextStoreProps = {
-	isMenuVisible: false,
+	isMenuVisible: true,
     user: {
         name: 'LPC',
         email: 'lpc@lpc.com.br',

@@ -9,7 +9,7 @@ export default function Layout(props: { children: React.ReactNode }) {
 
 	return (
 		<div className={`
-            app ${isMenuVisible ? 'hide-menu' : ''}
+            app ${!isMenuVisible ? 'hide-menu' : ''}
             h-dvh w-full antialiased
         `}>
 			<Header
