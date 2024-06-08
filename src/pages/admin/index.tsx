@@ -1,4 +1,4 @@
-import PageTitle from '@/components/template/PageTitle'
+import PageTitle from '@/components/pages/PageTitle'
 import { Cog8ToothIcon } from '@heroicons/react/16/solid'
 
 export default function AdminPages() {
