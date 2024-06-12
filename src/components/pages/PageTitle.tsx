@@ -14,7 +14,7 @@ export default function PageTitle(props: IPageTitleProps) {
 			<h2 className="] text-[1.3rem] mt-[5px] text-gray-500">
 				{props.sub}
 			</h2>
-			<hr className="bg-gray-300 h-1 mt-2" />
+			<hr className="bg-gray-300 h-1 mt-2 mb-[15px]" />
 		</div>
 	)
 }
