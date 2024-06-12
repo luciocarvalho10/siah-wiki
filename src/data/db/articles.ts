@@ -1,9 +1,9 @@
-export type Artigo = {
+export type Article = {
     id: number
 	name: string
 }
 
-const artigos: Artigo[] = [
+const articles: Article[] = [
 	{
 		id: 1,
         name: 'Trocando senha.',
@@ -26,4 +26,4 @@ const artigos: Artigo[] = [
 	},
 ]
 
-export default artigos
+export default articles

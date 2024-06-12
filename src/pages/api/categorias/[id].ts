@@ -1,13 +1,13 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import categorias from '@/data/db/categorias'
-import type { Categoria } from '@/data/db/categorias'
+import categories from '@/data/db/categories'
+import type { Category } from '@/data/db/categories'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-	const sendCategoria = (C: Categoria) => res.status(200).json(C)
+export default function handler(req: NextApiRequest, res: NextApiResponse<Category>) {
+	const sendCategory = (C: Category) => res.status(200).json(C)
 
-	const ReqCategoriaId: Categoria | any = req.query.id
-    const categoria: Categoria[] = categorias.filter(c => c.id === ReqCategoriaId)
+	const ReqCategoryId = Number(req.query.id)
+    const category: Category[] = categories.filter(c => c.id === ReqCategoryId)
 
-	categoria.length === 1 ? sendCategoria(categoria[0]) : res.status(204).send //.send()
+	category.length === 1 ? sendCategory(category[0]) : res.status(204).send //.send()
 }

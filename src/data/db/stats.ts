@@ -1,17 +1,17 @@
 import users from '@/data/db/users'
-import artigos from '@/data/db/artigos'
-import categorias from '@/data/db/categorias'
+import articles from '@/data/db/articles'
+import categories from '@/data/db/categories'
 
 export type Stats = {
 	users: number
-	artigos: number
-	categorias: number
+	articles: number
+	categories: number
 }
 
 const stats: Stats = {
 	users: users.length,
-	artigos: artigos.length,
-	categorias: categorias.length,
+	articles: articles.length,
+	categories: categories.length,
 }
 
 export default stats

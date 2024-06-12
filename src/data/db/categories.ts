@@ -1,9 +1,9 @@
-export type Categoria = {
+export type Category = {
     id: number
 	name: string
 }
 
-const categorias: Categoria[] = [
+const categories: Category[] = [
 	{
 		id: 1,
         name: 'Vendas',
@@ -30,4 +30,4 @@ const categorias: Categoria[] = [
 	},
 ]
 
-export default categorias
+export default categories
