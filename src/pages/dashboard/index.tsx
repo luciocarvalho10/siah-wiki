@@ -34,19 +34,19 @@ export default function Dashboard() {
 				<Stat
 					title="Categorias"
 					value={stats.categories}
-					icon={<FolderIcon className="h-6 w-6" />}
+					icon={<FolderIcon className="h-20 w-20" />}
 					color="#d54d50"
 				/>
 				<Stat
 					title="Artigos"
 					value={stats.articles}
-					icon={<NewspaperIcon className="h-6 w-6" />}
+					icon={<NewspaperIcon className="h-20 w-20" />}
 					color="#3bc480"
 				/>
 				<Stat
 					title="Usuários"
 					value={stats.users}
-					icon={<UserIcon className="h-6 w-6" />}
+					icon={<UserIcon className="h-20 w-20" />}
 					color="#3282cd"
 				/>
 			</div>
