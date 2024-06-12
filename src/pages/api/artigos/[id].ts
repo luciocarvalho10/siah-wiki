@@ -1,13 +1,13 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import artigos from '@/data/db/artigos'
-import type { Artigo } from '@/data/db/artigos'
+import articles from '@/data/db/articles'
+import type { Article } from '@/data/db/articles'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-	const sendArtigo = (A: Artigo) => res.status(200).json(A)
+export default function handler(req: NextApiRequest, res: NextApiResponse<Article>) {
+	const sendArticle = (A: Article) => res.status(200).json(A)
 
-	const ReqArtigoId: Artigo | any = req.query.id
-    const artigo: Artigo[] = artigos.filter(a => a.id === ReqArtigoId)
+	const ReqArticleId = Number(req.query.id)
+    const article: Article[] = articles.filter(a => a.id === ReqArticleId)
 
-	artigo.length === 1 ? sendArtigo(artigo[0]) : res.status(204).send //.send()
+	article.length === 1 ? sendArticle(article[0]) : res.status(204).send //.send()
 }
